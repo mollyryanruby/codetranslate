@@ -9,8 +9,8 @@ function App() {
         <h1>Code Translator</h1>
       </header>
       <body>
-        <div className="App">
-          <Translation />
+          <div className="App-function">
+            <Translation />
         </div>
       </body>
     </div>

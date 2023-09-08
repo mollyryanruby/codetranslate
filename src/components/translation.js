@@ -13,20 +13,25 @@ function Translation() {
   return (
     <div className='Translation'>
       <h2>Translate your code!</h2>
-      <textarea
-        placeholder="Enter text to translate"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
-      <button onClick={translateText}>Translate</button>
-      <div className='Result'>
-        {translatedText && (
-          <div>
-            <h3>Translation Result:</h3>
-            <p>{translatedText}</p>
+      <div className='TranslationBoxes'>
+        <div className='Box'>
+          <textarea
+            placeholder="Enter text to translate"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+        </div>
+        <div className='Box'>
+          <div className='Result'>
+            {translatedText && (
+              <div>
+                <p>{translatedText}</p>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
+      <button onClick={translateText}>Translate</button>
     </div>
   );
 }

@@ -4,12 +4,14 @@
   --green: #5E8D68;
   --grey: #DADADA;
   --red: #F44236;
-  --pink: #E67597;
+  --pink: #E87F9E;
   --white: #FAFBFC;
+  --truewhite: #F5F3F3;
   --purple: #853F9D;
+  --blue: #978CCD;
 }
 
-body, h1, header, body {
+body, h1, header, p, body {
   margin: 0;
   padding: 0;
   /* border: 2px solid black; */
@@ -43,16 +45,12 @@ header {
   background-color: var(--white);
   width: 100%;
   box-shadow: 0px 5px 12px rgba(36, 36, 36, 0.347);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 /* Style for the Translation component container */
 .Translation {
-  background-color: #f6f3f3;
-  border: 1px solid #ccc;
-  padding: 100px;
-  border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  background-color: var(--grey);
 }
 
 /* Style for the title */
@@ -63,14 +61,20 @@ h2 {
 }
 
 /* Style for the textarea */
-textarea {
-  width: 100%;
-  min-height: 80px;
+textarea, .Result {
+  width: 80%;
+  min-height: 90%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 0px solid #ccc;
+  background-color: var(--truewhite);
   border-radius: 4px;
   text-align: center;
+  resize: none;
+}
+
+textarea:focus, input:focus{
+  outline: none;
 }
 
 /* Style for the Translate button */
@@ -90,17 +94,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Style for the translation result container */
-.Result {
-  width: 100%;
-  margin-top: 20px;
-  min-height: 80px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-}
-
 h3 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -110,4 +103,23 @@ h3 {
 p {
   font-size: 18px;
   color: #555;
+  margin: 0;
+}
+
+.TranslationBoxes {
+  display: flex; /* Use flexbox to arrange items horizontally */
+  justify-content: space-between; /* Space items evenly within the container */
+}
+
+.Box {
+  width: 30vw; /* Set the width of each box */
+  height: 30vh; /* Set the height of each box */
+  background-color: var(--truewhite); /* Background color of the boxes */
+  border: 1px solid #ccc; /* Add borders to the boxes */
+  padding: 10px; /* Add padding to the boxes for spacing */
+  box-sizing: border-box; /* Include padding and border in box size */
+  margin: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
