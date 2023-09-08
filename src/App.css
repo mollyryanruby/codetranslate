@@ -1,31 +1,113 @@
+
+:root {
+  --orange: #D37B32;
+  --green: #5E8D68;
+  --grey: #DADADA;
+  --red: #F44236;
+  --pink: #E67597;
+  --white: #FAFBFC;
+  --purple: #853F9D;
+}
+
+body, h1, header, body {
+  margin: 0;
+  padding: 0;
+  /* border: 2px solid black; */
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: Arial, sans-serif;
+  background-color: var(--grey);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header h1 {
+  font-size: calc(12px + 8vmin);
+  font-weight: 600;
+  background-image: linear-gradient(to left, #c992da, var(--purple));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding: 10%;
 }
 
-.heart {
-  color: #ff0000;
+header {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: var(--white);
+  width: 100%;
+  box-shadow: 0px 5px 12px rgba(36, 36, 36, 0.347);
+  margin-bottom: 20px;
 }
 
-.small {
-  font-size: 0.75rem;
+/* Style for the Translation component container */
+.Translation {
+  background-color: #f6f3f3;
+  border: 1px solid #ccc;
+  padding: 100px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the title */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Style for the textarea */
+textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Style for the Translate button */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 15px 30px; /* Increased padding for bigger size */
+  font-size: 18px;
+  margin-top: 20px; /* Increased margin-top to create space */
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the translation result container */
+.Result {
+  width: 100%;
+  margin-top: 20px;
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
 }
