@@ -12,7 +12,6 @@ function Translation() {
 
   return (
     <div className='Translation'>
-      <h2>Translate your code!</h2>
       <div className='TranslationBoxes'>
         <div className='Box'>
           <textarea
