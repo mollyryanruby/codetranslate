@@ -1,26 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-  --orange: #D37B32;
-  --green: #5E8D68;
-  --grey: #DADADA;
-  --red: #F44236;
-  --pink: #E87F9E;
-  --white: #FAFBFC;
-  --truewhite: #F5F3F3;
-  --purple: #853F9D;
-  --blue: #978CCD;
+  --color_1: #141854;
+  --color_2: #ffdc15;
+  --white: #f9f8f7;
+  /* 978CCD */
 }
 
-body, h1, header, p, body {
+body, h1, h2, h3, header, p, body {
   margin: 0;
   padding: 0;
-  /* border: 2px solid black; */
+  font-family: 'Lato', sans-serif;
+  color: var(--black);
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: calc(12px + 5vmin);
+}
+
+h2 {
+  font-size: calc(12px + 2vmin);
+  color: #333;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: calc(10px + 1vmin);
+  color: var(--black);
+}
+
+p {
+  font-size: calc(8px + 1vmin);
+  margin: 0;
 }
 
 .App {
   text-align: center;
-  font-family: Arial, sans-serif;
-  background-color: var(--grey);
+  font-family: 'Lato', sans-serif;
+  background-color: var(--white);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,47 +48,70 @@ body, h1, header, p, body {
   font-size: calc(10px + 2vmin);
 }
 
-header h1 {
-  font-size: calc(12px + 8vmin);
-  font-weight: 600;
-  background-image: linear-gradient(to left, #c992da, var(--purple));
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  padding: 10%;
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+}
+
+
+.NavBar-inner {
+  display: flex;  
+  justify-content: space-between;
+  width: 94%;
+  padding-bottom: 2.5%;
+  padding-top: 2.5%;
+}
+
+nav h3 {
+  color: var(--color_1);
+  font-size: calc(8px + 1vmin)
+}
+
+.Menu {
+  display: flex;
+  justify-content: right;
+}
+
+.Menu-item {
+  padding-left: 2vw;
 }
 
 header {
   text-align: center;
-  font-family: Arial, sans-serif;
-  background-color: var(--white);
+  background-color: var(--color_1);
   width: 100%;
-  box-shadow: 0px 5px 12px rgba(36, 36, 36, 0.347);
-  margin-bottom: 12px;
+  padding-bottom: 8%;
+  padding-top: 12%;
+  margin: 0px;
+}
+
+header h1 {
+  padding-bottom: 2%;
+  color: var(--white)
+}
+
+header p {
+  font-size: calc(6px + 1vmin);
+  color: var(--white);
+  padding-left: 35%;
+  padding-right: 35%;
+  font-weight: 700;
 }
 
 /* Style for the Translation component container */
-.Translation {
-  background-color: var(--grey);
-}
-
-/* Style for the title */
-h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
-}
 
 /* Style for the textarea */
 textarea, .Result {
-  width: 80%;
-  min-height: 90%;
+  width: 90%;
+  min-height: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 0px solid #ccc;
-  background-color: var(--truewhite);
+  border: None;
+  background-color: var(--white);
   border-radius: 4px;
-  text-align: center;
+  text-align: left;
   resize: none;
 }
 
@@ -79,11 +121,12 @@ textarea:focus, input:focus{
 
 /* Style for the Translate button */
 button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--color_2);
+  color: var(--color_1);
   border: none;
-  padding: 15px 30px; /* Increased padding for bigger size */
-  font-size: 18px;
+  padding: 10px 30px; /* Increased padding for bigger size */
+  font-size: 12px;
+  font-weight: 700;
   margin-top: 20px; /* Increased margin-top to create space */
   cursor: pointer;
   border-radius: 4px;
@@ -94,17 +137,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-p {
-  font-size: 18px;
-  color: #555;
-  margin: 0;
-}
 
 .TranslationBoxes {
   display: flex; /* Use flexbox to arrange items horizontally */
@@ -112,14 +144,29 @@ p {
 }
 
 .Box {
-  width: 30vw; /* Set the width of each box */
-  height: 30vh; /* Set the height of each box */
-  background-color: var(--truewhite); /* Background color of the boxes */
-  border: 1px solid #ccc; /* Add borders to the boxes */
+  width: 40vw; /* Set the width of each box */
+  height: 40vh; /* Set the height of each box */
+  background-color: var(--white); /* Background color of the boxes */
+  border: 1px solid #ccc; 
   padding: 10px; /* Add padding to the boxes for spacing */
   box-sizing: border-box; /* Include padding and border in box size */
   margin: 5vw;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.Arrow {
+  max-width: 7%;
+  margin: -1px;
+}
+
+.App-function {
+  margin: 8vh;
+}
+
+.Footer {
+  height: 30vh;
+  width: 100%;
+  background-color: var(--color_1);
 }
